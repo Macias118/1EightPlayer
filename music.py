@@ -30,6 +30,7 @@ class Application(Frame):
 	def chooseFile(self):
 		musicFile = askopenfilename()
 		self.playlist.append(musicFile)
+		self.listbox.insert(END, musicFile.split('/')[-1])
 
 	def createWidgets(self):
 		self.QUIT = Button(self)
@@ -66,7 +67,17 @@ class Application(Frame):
 
 		self.stopButton.pack({"side": "right"})
 
+		self.listbox = Listbox(
+			self.master,
+			bg='#FFBF00',
+			bd=3,
+			font='DejaVuSerif-Bold'
+		)
+		# print(self.listbox[0])
+		self.listbox.pack()
+
 	def __init__(self, master=None):
+		self.master = master
 		pygame.init()
 		pygame.mixer.init()
 
