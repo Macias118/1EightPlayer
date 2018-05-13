@@ -29,13 +29,7 @@ class Application(Frame):
 			print('None of song is selected')
 		else:
 			pygame.mixer.music.load('./media/' + self.current_song)
-			pygame.mixer.music.play()
-			
-		# if self.current_song != None:
-		# 	pygame.mixer.music.load(self.current_song)
-		# 	pygame.mixer.music.play()
-		# while pygame.mixer.music.get_busy(): 
-		# 	print('Playing...') 	
+			pygame.mixer.music.play()	
 
 	def stop(self):
 		pygame.mixer.music.stop()
@@ -54,12 +48,6 @@ class Application(Frame):
 		self.QUIT["command"] =  self.quit
 
 		self.QUIT.pack({"side": "left"})
-
-		# self.hi_there = Button(self)
-		# self.hi_there["text"] = "Hello",
-		# self.hi_there["command"] = self.say_hi
-
-		# self.hi_there.pack({"side": "left"})
 
 		self.playButton = Button(self)
 		self.playButton["text"] = "\xe2\x99\xaa"
