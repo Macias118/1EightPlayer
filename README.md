@@ -11,3 +11,7 @@ Python Music Player
 - create own tracklist
 - save tracklist to file
 - GUI
+- create widgets:
+	* play, pause, stop button
+	* choose file
+	* track listbox

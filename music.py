@@ -1,16 +1,59 @@
-# import pygame
-
-# pygame.init()
-# pygame.mixer.init()
-# musicFile = '/home/macias/Muzyka/BEASTIE BOYS - Hot Sauce Committee(2011)/01.Make Some Noise.mp3'
-# pygame.mixer.music.load(musicFile)
-# pygame.mixer.music.play()
-# while pygame.mixer.music.get_busy(): 
-# 	print('Playing...')
-
 from Tkinter import *
 from tkFileDialog import askopenfilename
 import pygame
+
+class Song():
+
+	def __init__(self, path):
+		self.path = path
+		self.name = self.path.split('/')[-1]
+
+class Application(Frame):
+
+	def __init__(self, master=None):
+		self.master = master
+		pygame.init()
+		pygame.mixer.init()
+
+		master.minsize(width=800, height=600)
+		master.configure(background='#ff9d00')
+		Frame.__init__(self, master)
+		self.pack()
+		self.createWidgets()
+
+	def createWidgets(self):
+		pass
+
+	def uploadFile(self):
+		pass
+
+	def playSong(self):
+		pass
+
+	def stopSong(self):
+		pass
+
+	def pauseSong(self):
+		pass
+
+	def createTracklist(self):
+		pass
+
+	def playTracklist(self):
+		pass
+
+class TrackList():
+	pass
+
+if __name__ == '__main__':
+	root = Tk()
+	#root.wm_attributes('-type', 'splash')
+	root.wm_attributes()
+	app = Application(master=root)
+	app.mainloop()
+	# root.destroy()
+
+'''
 
 class Song():
 	def __init__(self, path):
@@ -105,3 +148,6 @@ root.wm_attributes('-type', 'splash')
 app = Application(master=root)
 app.mainloop()
 root.destroy()
+
+
+'''
